@@ -1,0 +1,30 @@
+public class Palindrome {
+    public static void main(String[] args) {
+
+      String original = "mom";
+      // the empty string is here so we can add to it
+      String reverse = "";
+      
+      // the for loop is to grab evey character from the end to the beginning
+      // the original.char is going through each letter
+      for(int i = original.length() - 1; i >= 0; i--) {
+        reverse += original.charAt(i);
+        System.out.println(reverse);
+      }
+
+      // this code is comparing the original to the reverse and seeing the charaters match at said index
+      boolean palin = true;
+      for(int i = 0; i < original.length(); i++)
+      if (original.charAt(i) != reverse.charAt(i)) {
+        palin = false;
+      }
+
+      if(palin) {
+        System.out.println("the word is a palindrome");
+      } else {
+        System.out.println("the word is not a palindrome");
+      }
+
+
+    }
+}
