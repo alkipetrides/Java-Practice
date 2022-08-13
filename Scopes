@@ -1,0 +1,35 @@
+//What variables can be seen?
+/*  static/class scope: any variable declared within a class is accessible by all methods in that class
+
+     instance/object scope: can only see objects and static
+
+    method scope: anything inside the methods block of code
+
+    block scope: inside a method that has curly braces, you wont be able to access outside
+ */
+
+public class Scopes {
+
+    // static/class scope static stuff be here and can only see static
+
+    int number = 0;
+
+    public static void main(String[] args) {
+
+        // instance scope and objects
+        Scopes scope = new Scopes();
+
+        int num = 5;
+
+        if (num < 10) { // method scope between the curly q's
+
+            System.out.println(num + " is less than 10");
+            int block = 6; // block
+        } else {
+            System.out.println(num + " is greater than 10");
+        }
+        // System.out.println(block); variable cannot reach
+
+    }
+
+}
