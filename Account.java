@@ -11,7 +11,6 @@ public class Account {
 
         if (amount <= 1000) {
             System.out.println("You deposited: " + amount);
-
         }
         if (amount > 1000 && amount <= 5000) {
             System.out.println("You deposited: " + amount  + " The bank is suspecting you of money laundering! Where did you get all that cash?");
@@ -45,8 +44,6 @@ public class Account {
 
     public void setBalance(double balance) {
         this.balance = balance;
-
-        
     }
 
     @Override
